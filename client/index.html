@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grapevine</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body class="text-success">
+
+<div id="messageContainer" class="bg-dark">
+    <h2>Chatroom:</h2>
+    <div id="messageBody" class="chat-display"></div>
+</div>
+
+<div id="usersBody"></div>
+
+<div id="inputBody" class="bg-dark text-center">
+    <div id="text-options">
+       <select id="text-color">
+           <option value="success">Green</option>
+           <option value="danger">Red</option>
+           <option value="primary">Blue</option>
+           <option value="warning">Yellow</option>
+           <option value="secondary">Grey</option>
+           <option value="light">White</option>
+       </select>
+    </div>
+    <label for="text-content"></label>
+    <input type="text" id="text-content" class="messageField">
+    <div class="buttons">
+        <button type="button" id="btnSendToAll" class="btn btn-success">Send to all</button>
+        <button type="button" id="btnSendToSelf" class="btn btn-success">Send to self</button>
+        <button type="button" id="btnExit" class="btn btn-danger">Exit</button>
+    </div>
+
+</div>
+
+
+
+
+
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</html>

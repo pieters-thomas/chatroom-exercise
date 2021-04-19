@@ -1,0 +1,37 @@
+#messageContainer {
+    margin: auto;
+    width: 66%;
+}
+
+#messageBody {
+    height: 500px;
+    width: 100%;
+    overflow-y: scroll;
+    padding-left: 10px;
+
+}
+
+#usersBody {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+}
+
+#inputBody{
+    margin: 25px auto ;
+    width: 66%;
+}
+
+.messageField, .buttons{
+    margin: 30px auto 0 auto;
+    width: 80%;
+    text-align: left;
+
+}
+
+.messageField{
+    padding-left: 5px;
+}
