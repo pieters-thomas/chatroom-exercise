@@ -9,40 +9,43 @@
 </head>
 <body class="text-success">
 
-<div id="messageContainer" class="bg-dark">
-    <h2>Chatroom:</h2>
-    <div id="messageBody" class="chat-display"></div>
-</div>
+<nav id="mainNav" class="bg-dark">
+    <template>
+        <div class='avatar'>
+            <img class='avatar-pic' src='' alt='avatar'>
+            <p class='avatar-name'>UserName</p>
+            <p class='avatar-tag'>Tag</p></div>
+    </template>
+    <div id="usersBody"></div>
+</nav>
 
-<div id="usersBody"></div>
+<article id="mainArticle">
+    <div id="user-display">My name here?</div>
+    <div class="chat-display messageBody" id="messageBody"></div>
 
-<div id="inputBody" class="bg-dark text-center">
-    <div id="text-options">
-       <select id="text-color">
-           <option value="success">Green</option>
-           <option value="danger">Red</option>
-           <option value="primary">Blue</option>
-           <option value="warning">Yellow</option>
-           <option value="secondary">Grey</option>
-           <option value="light">White</option>
-       </select>
+    <div id="inputBody" class="text-center bg-secondary">
+        <div id="text-options">
+            <label for="send-to"> To:</label><select id="send-to"></select>
+            <label for="text-color">Font Color: </label><select id="text-color"></select>
+            <label for="text-font"> Font Weight: </label><select id="text-font"></select>
+            <label for="text-size"> Font Size: </label><select id="text-size"></select>
+        </div>
+
+        <label for="text-content"></label>
+        <textarea id="text-content" class="messageField" rows="5"></textarea>
+
+        <div class="buttons">
+            <button type="button" id="btnSend" class="btn btn-success">Send</button>
+            <button type="button" id="btnSendAll" class="btn btn-success">Send to all</button>
+            <button type="button" id="btnExit" class="btn btn-danger">Exit</button>
+        </div>
     </div>
-    <label for="text-content"></label>
-    <input type="text" id="text-content" class="messageField">
-    <div class="buttons">
-        <button type="button" id="btnSendToAll" class="btn btn-success">Send to all</button>
-        <button type="button" id="btnSendToSelf" class="btn btn-success">Send to self</button>
-        <button type="button" id="btnExit" class="btn btn-danger">Exit</button>
-    </div>
-
-</div>
-
-
-
-
-
-
+</article>
+<div id="typing"></div>
 </body>
+
+<script src="scripts/textOptions.js"></script>
 <script src="/socket.io/socket.io.js"></script>
-<script src="script.js"></script>
+<script src="scripts/client.js"></script>
+
 </html>
